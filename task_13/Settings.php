@@ -12,12 +12,12 @@ class Settings
 
     public static function setItem($name, $value)
     {
-        self::getInstance()->settings[$name] = $value;
+        self::$settings[$name] = $value;
     }
 
     public static function getItem($name)
     {
-        $settings = self::getInstance()->settings;
+        $settings = self::$settings;
         return isset($settings[$name]) ? $settings[$name] : null;
     }
 
